@@ -1,0 +1,244 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+}
+
+/* Main wrapper */
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Title Banner */
+.header-title {
+  background-color: #006699;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #343a40;
+  padding: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Dashboard */
+.dashboard-container {
+  flex-grow: 1;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f6f8;
+}
+
+.dashboard-title {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #333;
+  text-align: center;
+}
+
+/* Tile Container */
+.tile-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 10px;
+}
+
+/* Tile Cards */
+.tile {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 25px 15px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.tile h3 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  color: #444;
+}
+
+.tile p {
+  font-size: 24px;
+  color: #000;
+}
+
+/* Tile Colors */
+.tile.available {
+  background-color: #e3fcef;
+  border-left: 6px solid #28a745;
+}
+
+.tile.received {
+  background-color: #e7f1ff;
+  border-left: 6px solid #007bff;
+}
+
+.tile.pending {
+  background-color: #fff7e6;
+  border-left: 6px solid #ffc107;
+}
+
+.tile.expended {
+  background-color: #fdecea;
+  border-left: 6px solid #dc3545;
+}
+
+/* Footer */
+.footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+/* 🔁 Responsive for Mobile */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .dashboard-title {
+    font-size: 22px;
+  }
+
+  .tile {
+    padding: 20px 10px;
+  }
+
+  .tile h3 {
+    font-size: 18px;
+  }
+
+  .tile p {
+    font-size: 20px;
+  }
+}
+
+/* ...Keep your existing CSS... */
+
+/* Toggle Button */
+.menu-toggle {
+  display: none;
+  background-color: #343a40;
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Show menu button and collapse nav on small screen */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #343a40;
+    padding: 10px 20px;
+    margin: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+  }
+}
+
+/* Table Wrapper */
+.table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Table Styling */
+.balance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.balance-table th,
+.balance-table td {
+  padding: 10px 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.balance-table thead {
+  background-color: #006699;
+  color: white;
+  font-weight: bold;
+}
+
+.balance-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
